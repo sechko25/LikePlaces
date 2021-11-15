@@ -75,7 +75,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageOfPlace" destination="EPX-Eg-1vW" id="hYQ-Ub-fmV"/>
-                                    <outlet property="locationLabel" destination="QhC-Dh-MPf" id="A4Q-yX-Gf4"/>
+                                    <outlet property="locationLabel" destination="ANO-ZR-Bsx" id="R8H-jP-LuZ"/>
                                     <outlet property="nameLabel" destination="XRF-6s-maY" id="2lk-18-txy"/>
                                     <outlet property="typeLabel" destination="QhC-Dh-MPf" id="bJ6-p7-Irz"/>
                                 </connections>
