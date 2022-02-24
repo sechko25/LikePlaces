@@ -9,7 +9,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
-    var newPlace: Place?
+    var newPlace = Place()
     var imageIsChanged = false
     
     @IBOutlet weak var placeName: UITextField!
@@ -21,11 +21,9 @@ class NewPlaceViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.tableFooterView = UIView()
-        
         saveButton.isEnabled = false
-        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
@@ -66,11 +64,11 @@ class NewPlaceViewController: UITableViewController {
             image = UIImage(named: "Office")
         }
         
-        newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         image: image,
-                         restaurantImage: nil)
+//        newPlace = Place(name: placeName.text!,
+//                         location: placeLocation.text,
+//                         type: placeType.text,
+//                         image: image,
+//                         restaurantImage: nil)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
