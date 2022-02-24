@@ -68,6 +68,7 @@
                                     <outlet property="locationLabel" destination="ANO-ZR-Bsx" id="R8H-jP-LuZ"/>
                                     <outlet property="nameLabel" destination="XRF-6s-maY" id="2lk-18-txy"/>
                                     <outlet property="typeLabel" destination="QhC-Dh-MPf" id="bJ6-p7-Irz"/>
+                                    <segue destination="rjO-M9-y1C" kind="show" identifier="showDetail" id="MrK-xO-mxR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,7 +87,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sza-sd-IoA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="0.44977511244377816"/>
+            <point key="canvasLocation" x="30" y="23"/>
         </scene>
         <!--New Place-->
         <scene sceneID="9lC-GK-A9M">
@@ -265,7 +266,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lN-pq-m4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="sw4-6T-njE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1432.8" y="0.44977511244377816"/>
+            <point key="canvasLocation" x="806" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gSZ-I9-sPK">
@@ -284,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kym-uF-2GU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="2"/>
+            <point key="canvasLocation" x="-751" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9bI-ai-UwS">
@@ -302,9 +303,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg3-k6-yUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741.60000000000002" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="807" y="-694"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MrK-xO-mxR"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AddPhoto" width="75" height="75"/>
         <systemColor name="systemBackgroundColor">
