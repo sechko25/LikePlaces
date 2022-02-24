@@ -9,11 +9,24 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
-    @IBOutlet weak var imageOfPlace: UIImageView!
+    var newPlace: Place?
+    var imageIsChanged = false
+    
+    @IBOutlet weak var placeName: UITextField!
+    @IBOutlet weak var placeLocation: UITextField!
+    @IBOutlet weak var placeType: UITextField!
+    @IBOutlet weak var placeImage: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.tableFooterView = UIView()
+        
+        saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     // MARK: Table View Delegate
@@ -43,6 +56,27 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    func saveNewPlace() {
+        
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = placeImage.image
+        } else {
+            image = UIImage(named: "Office")
+        }
+        
+        newPlace = Place(name: placeName.text!,
+                         location: placeLocation.text,
+                         type: placeType.text,
+                         image: image,
+                         restaurantImage: nil)
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: Text Field Delegate
@@ -53,6 +87,15 @@ extension NewPlaceViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldChanged() {
+        
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
 }
 
@@ -72,9 +115,12 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        imageOfPlace.image = info[.editedImage] as? UIImage  // присваеваем отредактированое фото
-        imageOfPlace.contentMode = .scaleAspectFit  // маштабирует фото по UIImage
-        imageOfPlace.clipsToBounds = true  // обрезка по границам
+        placeImage.image = info[.editedImage] as? UIImage  // присваеваем отредактированое фото
+        placeImage.contentMode = .scaleAspectFit  // маштабирует фото по UIImage
+        placeImage.clipsToBounds = true  // обрезка по границам
+        
+        imageIsChanged = true
+        
         dismiss(animated: true)  // закрываем видеоконтроллер
     }
 }
