@@ -11,8 +11,11 @@ import RealmSwift
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var reversedSortingButton: UIBarButtonItem!
     
     var places: Results<Place>!
+    var ascendinSorting = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,4 +79,34 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newPlaceVC.savePlace()
         tableView.reloadData()
     }
+    
+    @IBAction func sortSelection(_ sender: UISegmentedControl) {
+        
+        sorting()
+    }
+    
+    @IBAction func reversSorting(_ sender: Any) {
+        
+        ascendinSorting.toggle()
+        
+        if ascendinSorting {
+            reversedSortingButton.image = UIImage(systemName: "arrow.down")
+        } else {
+            reversedSortingButton.image = UIImage(systemName: "arrow.up")
+        }
+        
+        sorting()
+    }
+    
+    private func sorting() {
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            places = places.sorted(byKeyPath: "date", ascending: ascendinSorting)
+        } else {
+            places = places.sorted(byKeyPath: "name", ascending: ascendinSorting)
+        }
+        
+        tableView.reloadData()
+    }
+    
 }

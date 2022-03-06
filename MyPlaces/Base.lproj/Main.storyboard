@@ -267,6 +267,9 @@
                                     <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="i9L-4w-cKI" eventType="valueChanged" id="217-Xl-K6X"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="27b-PY-hIt"/>
@@ -279,7 +282,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" id="ngs-IG-dZX">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.up" catalog="system" id="8t8-mu-fO2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.down" catalog="system" id="8t8-mu-fO2">
+                            <connections>
+                                <action selector="reversSorting:" destination="i9L-4w-cKI" id="KgO-EF-CxX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3CY-Fu-f8o">
                             <connections>
                                 <segue destination="jej-r3-Dre" kind="presentation" modalPresentationStyle="fullScreen" id="Ve8-GJ-Tg5"/>
@@ -287,6 +294,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="8t8-mu-fO2" id="LjQ-P9-tlm"/>
+                        <outlet property="segmentedControl" destination="NyV-UC-7ds" id="q1H-gX-Q5s"/>
                         <outlet property="tableView" destination="921-9j-faH" id="y5N-UO-zVQ"/>
                     </connections>
                 </viewController>
@@ -341,7 +350,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddPhoto" width="75" height="75"/>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
