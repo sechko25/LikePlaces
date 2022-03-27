@@ -6,7 +6,7 @@
 //
 import RealmSwift
 import Foundation
-      
+   // gggg
 class Place: Object {
     
     @objc dynamic var name = " "
