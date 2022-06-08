@@ -172,13 +172,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if segmentedControl.selectedSegmentIndex == 0 {
                 filterPlaces = filterPlaces.sorted(byKeyPath: "date", ascending: ascendinSorting)
             } else {
-                filterPlaces = filterPlaces.sorted(byKeyPath: "name", ascending: ascendinSorting)
+                filterPlaces = filterPlaces.sorted(byKeyPath: "rating", ascending: ascendinSorting)
             }
         } else {
             if segmentedControl.selectedSegmentIndex == 0 {
                 places = places.sorted(byKeyPath: "date", ascending: ascendinSorting)
             } else {
-                places = places.sorted(byKeyPath: "name", ascending: ascendinSorting)
+                places = places.sorted(byKeyPath: "rating", ascending: ascendinSorting)
             }
         }
         
@@ -196,7 +196,7 @@ extension MainViewController: UISearchResultsUpdating {
     // метод поиска по полю имя и локация в не зависимости от регистра
     private func filterContentForSearchText(_ searchText: String) {
 
-        filterPlaces = places.filter("name CONTAINS[c] %@", searchText)
+        filterPlaces = places.filter("rating CONTAINS[c] %@", searchText)
 
         tableView.reloadData()
     }
