@@ -58,6 +58,44 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
+        
+        if place.rating == 1 {
+            cell.imageOfStar1.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar2.image = UIImage(named: "emptyStar")
+            cell.imageOfStar3.image = UIImage(named: "emptyStar")
+            cell.imageOfStar4.image = UIImage(named: "emptyStar")
+            cell.imageOfStar5.image = UIImage(named: "emptyStar")
+        } else if place.rating == 2 {
+            cell.imageOfStar1.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar2.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar3.image = UIImage(named: "emptyStar")
+            cell.imageOfStar4.image = UIImage(named: "emptyStar")
+            cell.imageOfStar5.image = UIImage(named: "emptyStar")
+        } else if place.rating == 3 {
+            cell.imageOfStar1.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar2.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar3.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar4.image = UIImage(named: "emptyStar")
+            cell.imageOfStar5.image = UIImage(named: "emptyStar")
+        } else if place.rating == 4{
+            cell.imageOfStar1.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar2.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar3.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar4.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar5.image = UIImage(named: "emptyStar")
+        } else if place.rating == 5 {
+            cell.imageOfStar1.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar2.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar3.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar4.image = UIImage(named: "highlightedStar")
+            cell.imageOfStar5.image = UIImage(named: "highlightedStar")
+        } else {
+            cell.imageOfStar1.image = UIImage(named: "emptyStar")
+            cell.imageOfStar2.image = UIImage(named: "emptyStar")
+            cell.imageOfStar3.image = UIImage(named: "emptyStar")
+            cell.imageOfStar4.image = UIImage(named: "emptyStar")
+            cell.imageOfStar5.image = UIImage(named: "emptyStar")
+        }
 
         cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.size.height / CGFloat(2)
         cell.imageOfPlace.clipsToBounds = true

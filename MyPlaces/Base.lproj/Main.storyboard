@@ -161,8 +161,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="34H-4n-yL2" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="34H-4n-yL2" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="61.5" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -232,40 +232,71 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-gg-zc8">
-                                                    <rect key="frame" x="96" y="8" width="302" height="77"/>
+                                                    <rect key="frame" x="96" y="8" width="210" height="77"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJg-WY-1y0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="27.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="210" height="27.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSZ-DX-F7e">
-                                                            <rect key="frame" x="0.0" y="30.333333333333336" width="302" height="22.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="30.333333333333336" width="210" height="22.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U6-Lm-Gp7">
-                                                            <rect key="frame" x="0.0" y="55.666666666666664" width="302" height="21.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="55.666666666666664" width="210" height="21.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Nc-tP-boL">
+                                                    <rect key="frame" x="309" y="32.666666666666664" width="100" height="20"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="o8w-J8-fif">
+                                                            <rect key="frame" x="0.0" y="0.0" width="19.333333333333332" height="20"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="WVs-FG-aBE">
+                                                            <rect key="frame" x="20.333333333333314" y="0.0" width="19" height="20"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-2d-NjD">
+                                                            <rect key="frame" x="40.333333333333314" y="0.0" width="19.333333333333329" height="20"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="ohj-JD-65Q">
+                                                            <rect key="frame" x="60.666666666666686" y="0.0" width="19" height="20"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="LlM-We-YHf">
+                                                            <rect key="frame" x="80.666666666666686" y="0.0" width="19.333333333333329" height="20"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Bmd-PJ-gLe"/>
+                                                        <constraint firstAttribute="width" constant="100" id="qDo-Wc-k7f"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="6CU-gg-zc8" secondAttribute="trailing" constant="16" id="2IN-nr-qLa"/>
                                                 <constraint firstItem="DFq-Su-frC" firstAttribute="centerY" secondItem="gwq-9S-xen" secondAttribute="centerY" id="4Td-um-bbx"/>
                                                 <constraint firstItem="DFq-Su-frC" firstAttribute="leading" secondItem="gwq-9S-xen" secondAttribute="leading" constant="15" id="KOu-FR-qm6"/>
                                                 <constraint firstAttribute="bottom" secondItem="6CU-gg-zc8" secondAttribute="bottom" id="LHC-hE-Z5K"/>
+                                                <constraint firstItem="0Nc-tP-boL" firstAttribute="centerY" secondItem="gwq-9S-xen" secondAttribute="centerY" id="Z74-hg-zxn"/>
                                                 <constraint firstItem="6CU-gg-zc8" firstAttribute="top" secondItem="gwq-9S-xen" secondAttribute="top" constant="8" id="czw-uR-jdX"/>
                                                 <constraint firstItem="6CU-gg-zc8" firstAttribute="leading" secondItem="DFq-Su-frC" secondAttribute="trailing" constant="16" id="hRe-tu-I4p"/>
+                                                <constraint firstItem="0Nc-tP-boL" firstAttribute="leading" secondItem="6CU-gg-zc8" secondAttribute="trailing" constant="3" id="sA6-Au-d8d"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Nc-tP-boL" secondAttribute="trailing" constant="5" id="udO-jF-Yqa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageOfPlace" destination="DFq-Su-frC" id="wfT-p3-CQm"/>
+                                            <outlet property="imageOfStar1" destination="o8w-J8-fif" id="z12-el-32s"/>
+                                            <outlet property="imageOfStar2" destination="WVs-FG-aBE" id="Ax2-s6-d6h"/>
+                                            <outlet property="imageOfStar3" destination="Wly-2d-NjD" id="97J-fo-vgy"/>
+                                            <outlet property="imageOfStar4" destination="ohj-JD-65Q" id="4TX-Yd-8fb"/>
+                                            <outlet property="imageOfStar5" destination="LlM-We-YHf" id="GAE-bI-XaM"/>
                                             <outlet property="locationLabel" destination="GSZ-DX-F7e" id="9SV-lk-fey"/>
                                             <outlet property="nameLabel" destination="xJg-WY-1y0" id="Uxk-yh-XYa"/>
                                             <outlet property="typeLabel" destination="1U6-Lm-Gp7" id="Qy9-KJ-SjV"/>
@@ -321,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xb-8b-HL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="22.938530734632685"/>
+            <point key="canvasLocation" x="2.8985507246376816" y="22.826086956521742"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gSZ-I9-sPK">
@@ -371,6 +402,7 @@
     <resources>
         <image name="AddPhoto" width="75" height="75"/>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="emptyStar" width="255" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
