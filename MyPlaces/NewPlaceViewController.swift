@@ -1,10 +1,3 @@
-//
-//  NewPlaceViewController.swift
-//  MyPlaces
-//
-//  Created by secha on 19.11.21.
-//
-
 import UIKit
 
 class NewPlaceViewController: UITableViewController {
@@ -73,7 +66,7 @@ class NewPlaceViewController: UITableViewController {
                                    location: placeLocation.text,
                                    type: placeType.text,
                                    imageData: imageData,
-                                   rating: Double(ratingControl.rating))
+                                   rating: ratingControl.rating)
         
         // проверка режима(добавление/редактирование)
         if currentPlace != nil {
@@ -103,7 +96,7 @@ class NewPlaceViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
-            ratingControl.rating = Int(currentPlace.rating)
+            ratingControl.rating = currentPlace.rating
         }
     }
     

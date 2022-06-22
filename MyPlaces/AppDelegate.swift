@@ -1,17 +1,10 @@
-//
-//  AppDelegate.swift
-//  MyPlaces
-//
-//  Created by secha on 14.11.21.
-//
-
 import UIKit
 import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let schemaVersion: UInt64 = 2
+    let schemaVersion: UInt64 = 3
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

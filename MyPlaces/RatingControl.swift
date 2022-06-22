@@ -93,5 +93,4 @@ import SwiftUI
             button.isSelected = index < rating
         }
     }
-
 }

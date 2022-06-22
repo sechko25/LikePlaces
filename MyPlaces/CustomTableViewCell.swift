@@ -1,10 +1,3 @@
-//
-//  CustomTableViewCell.swift
-//  MyPlaces
-//
-//  Created by secha on 16.11.21.
-//
-
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {

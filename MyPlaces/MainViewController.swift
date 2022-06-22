@@ -1,10 +1,3 @@
-//
-//  MainViewController.swift
-//  MyPlaces
-//
-//  Created by secha on 15.11.21.
-//
-
 import UIKit
 import RealmSwift
 
@@ -196,7 +189,7 @@ extension MainViewController: UISearchResultsUpdating {
     // метод поиска по полю имя и локация в не зависимости от регистра
     private func filterContentForSearchText(_ searchText: String) {
 
-        filterPlaces = places.filter("rating CONTAINS[c] %@", searchText)
+        filterPlaces = places.filter("name CONTAINS[c] %@", searchText)
 
         tableView.reloadData()
     }
